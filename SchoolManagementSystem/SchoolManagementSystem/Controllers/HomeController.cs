@@ -26,5 +26,11 @@ namespace SchoolManagementSystem.Controllers
 
             return View();
         }
+
+        public ActionResult ViewExample()
+        {
+            return View();
+        }
+
     }
 }

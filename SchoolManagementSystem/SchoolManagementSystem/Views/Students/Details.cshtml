@@ -1,4 +1,5 @@
-﻿@model SchoolManagementSystem.Models.Student
+﻿@using SchoolManagementSystem.Models
+@model SchoolManagementSystem.Models.Student
 
 @{
     ViewBag.Title = "Details";
@@ -45,6 +46,31 @@
         </dd>
 
     </dl>
+    
+    <h2>Current Course Enrollment</h2>
+    
+    <table class="table table-condensed table-responsive">
+        <tr>
+            <th>Course Title</th>
+            <th>Credits</th>
+            <th>Grade</th>
+        </tr>
+         @foreach (var enrollment in Model.Enrollments)
+         {
+    <tr>
+        <td>
+            <p>@enrollment.Course.Title</p>
+        </td>
+        <td>
+            <p>@enrollment.Course.Credits</p>
+        </td>
+        <td>
+            <p>@enrollment.Grade</p>
+        </td>
+    </tr>
+         }
+
+    </table>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.StudentID }) |

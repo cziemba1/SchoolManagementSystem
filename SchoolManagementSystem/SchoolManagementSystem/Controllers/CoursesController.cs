@@ -10,8 +10,10 @@ using SchoolManagementSystem.Models;
 
 namespace SchoolManagementSystem.Controllers
 {
+    [Authorize]
     public class CoursesController : Controller
     {
+        
         private SchoolManagement_DBEntities db = new SchoolManagement_DBEntities();
 
         // GET: Courses

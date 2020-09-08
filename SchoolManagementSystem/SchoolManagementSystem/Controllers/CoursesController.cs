@@ -17,6 +17,7 @@ namespace SchoolManagementSystem.Controllers
         private SchoolManagement_DBEntities db = new SchoolManagement_DBEntities();
 
         // GET: Courses
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Courses.ToList());
